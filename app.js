@@ -1,14 +1,12 @@
-// server.js
-var http = require("http");
+var express = require("express");
+var app = express();
 
-function greet(req, res) {
-    res.writeHead(200, {"Content-Type": "text/plain"});
-    res.write("Hello World");
-    res.end();
-}
+app.set("view engine", "ejs");
 
-var server = http.createServer(greet);
+app.use(express.static('public'));
 
-server.listen(3000);
+app.get("/", function(req, res) {
+    res.render("index");
+});
 
-gasrregr
+app.listen(3000);
