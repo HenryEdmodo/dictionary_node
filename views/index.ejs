@@ -2,18 +2,69 @@
 <html ng-app="wordManager">
 <head>
 	<title>Dictionary App</title>
-	<link rel="stylesheet" type="text/css" href="styles/mystyle.css">
+	<link rel="stylesheet" type="text/css" href="styles/mystyle
+	.css">
+	<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+	
 </head>
-<body ng-controller="wineController">
-	<div>Please enter the words you want to look up (space delimited)</div>
-	<div>
-		<input type='text' id='the-word' ng-model='userText' placeholder="Enter words here">
-		<button ng-click="getWord();" id='submit-button'>Submit Chat</button>
-		
+<body ng-controller="wineController" class="about-body">
+	<div id="wrapper">
+		<div id="header">	
+      <div class="header-stuff">
+        <span class="brand-name">QuickDict</span>
+        <span class="real-float-right">
+          <button class="login-edmodo-button">
+		  		<img id="edmodo-logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/41205/edmodo-icon_1.png">
+		  		<div id="vertical-divider"></div>
+		  		<p>Log in with <span id="edmodo">Edmodo</span></p>
+				</button>
+        </span>
+      </div>        
+  	</div>  
+
+	<div id="content">
+		<div id="main-shit">
+			<div>Please enter the words you want to look up (space delimited)</div>
+				<div>			
+					<input class="push-down" type='text' id='the-word' ng-model='userText' placeholder="Enter words here">
+					<!--
+					<button ng-click="getWord();" id='submit-button'>Submit Chat</button>		
+				</div>	
+				-->		  
+
+				<div class='push-down'>
+					<button id='submit-button-two'>Submit everything</button>
+				</div>
+				<div id="response" class="push-down">
+					<p><span class="underline">Word</span>: <span id="entry-one"></span></p>
+					<p><span class="underline">Part of speech</span>: <span id="POS-one"></span></p>
+					<p><span class="underline">Definition</span>: <span id="def-one"></span></p>
+				</div>		
+		</div>
 	</div>
 
-	<div id='container'></div>
+	<div id="footer"></div>
+	
 
+		
+    
+<!--    	
+    	<div class="float-right">
+    		Praise for QuickDict: <span><i>Why hasn't someone done this already?</i></span>
+    	</div>
+-->    	
+		
+		
+
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script> -->
+<script src='jquery.js'></script>
+<script src='application.js'></script>
+<script src='edmodo_login.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.js"></script>
+
+</body>
+<!--
 	<script type="text/x-handlebars-template" id='users-template'>
 	<table>
 		<thead>
@@ -36,24 +87,7 @@
 
 	</table>
 	</script>
-
-	<button class="login-edmodo-button">
-  	<img id="edmodo-logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/41205/edmodo-icon_1.png">
-  	<div id="vertical-divider"></div>
-  	<p>Log in with <span id="edmodo">Edmodo</span></p>
-	</button>
-	<div class='push-down'>
-		<button id='submit-button-two'>Submit everything</button>
-	</div>
-	<div class='push-down'>
-
-	</div>
+-->
 
 
-
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script> -->
-<script src='jquery.js'></script>
-<script src='application.js'></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.js"></script>
-</body>
 </html>
