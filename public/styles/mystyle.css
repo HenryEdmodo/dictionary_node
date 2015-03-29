@@ -3,21 +3,23 @@ html,
 body {
   margin:0;
   padding:0;
-  height:100%;
+  height:100%;  
 }
 #wrapper {
   min-height:100%;
   position:relative;
 }
 #header {
-  padding:15px;
+  /*padding:15px;*/
   background:#F0F0F0;
-  border-radius: 0 0 10px 10px;
-  opacity: 0.95;
+  border-radius: 0 0 5px 5px;
+  opacity: 0.8;  
+  height: 50px
 }
 #content {
   padding:10px;
   padding-bottom:50px;   /* Height of the footer element */
+ 
 }
 #footer {
   width:100%;
@@ -26,8 +28,13 @@ body {
   bottom:0;
   left:0;  
   background:#F0F0F0;
-  border-radius: 10px 10px 0 0;
-  opacity: 0.95;
+  border-radius: 5px 5px 0 0;
+  opacity: 0.8;
+}
+#footer-stuff {
+  font-family: 'Cinzel Decorative', cursive; 
+  text-align: center;
+  padding: 5px 30px 5px 30px;
 }
 /* ------ END MAIN SHIT ------ */
 
@@ -87,7 +94,7 @@ button.login-edmodo-button p {
   margin-top: 40px;
 }
 .header-stuff {
-  padding: 10px 0 0 0;
+  padding: 0 0 0 0;
   margin-right: 5%;
 }
 .header-options li {
@@ -100,7 +107,7 @@ button.login-edmodo-button p {
 
 }
 .brand-name {
-  font-size: 22px;
+  font-size: 32px;
   padding: 10px 0 0 5%;
   color: black;
 }
@@ -157,26 +164,51 @@ color: black;
   float: right;  
 }
 #main-shit {
-  margin: 10% 20%;
-  padding: 5% 10%;
+  margin: 10% 0 10% 6%;
+  padding: 2% 5%;
   background: #F0F0F0;
   border-radius: 40px;  
+  max-width: 35%;
+  font-size: 24px;
 }
 .about-body {
-  background: url("http://bgfons.com/upload/words_texture1962.jpg");     
+  background: url(/images/dfwpaper.jpg);
+    background-size: 624px 807.6px;
+    background-repeat: no-repeat;
+    background-position: center;
+  /*background: url(/images/book1.jpg);     
   background-position: center center;
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;  
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover; */
   background-color: #211922;
   margin: 0;
   padding: 0;
+  
 }
 #response {
   display: none;
 }
 .underline {
   text-decoration: underline;
+}
+.srs-text {
+  font-family: 'EB Garamond', serif;  
+}
+.silly-text {
+  font-family: 'Indie Flower', cursive;
+}
+.regal-text {
+  font-family: 'Cinzel Decorative', cursive;  
+}
+.bigger-font {
+  font-size: 18px;
+}
+#the-word {
+  min-height: 60px;
+}
+.right-header {
+  padding: 12px;
 }

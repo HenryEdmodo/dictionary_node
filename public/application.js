@@ -27,31 +27,40 @@ app.controller("wineController", function($scope, $http) {
 */
 
 
-
 $(document).ready(function() {
 
-    // $('body').on('click', 'submit-button', hitAPI);
-/*
-    $('#submit-button').click(function() {        
-        var word = $('#the-word').val();
-        console.log(word);      
-        hitAPI(word);                       
-    });    
-*/
-
     $('#submit-button-two').click(function() {        
-        var word = $('#the-word').val();
-        console.log(word);      
-        hitAPI(word);                       
+        var word = $('#the-word').val();        
+        doItAll(word);                                      
     });   
     
 });
 
-var hitAPI = function(word){
-    console.log('get here?');
+var doItAll = function(word) {
+  var wordArray = intoArray(word);  
+  hitAPI(wordArray);
+}
+
+var intoArray = function(word) {
+
+  word = $.trim(word);
+
+  if (word.indexOf(',') !== -1) {
+    var trimmed = word.replace(/ /g,'')
+    var wordArray = trimmed.split(',');    
+  } else {
+    word = word.replace(/\s+/g, ' ');
+    var wordArray = word.split(" ");    
+  }  
+  return wordArray;
+}; 
+
+var hitAPI = function(wordArray){
+  for (i=0; i<wordArray.length; i++) { 
+    console.log(wordArray[i]);
     $.ajax({
         type: 'GET',
-        url: 'http://www.dictionaryapi.com/api/v1/references/collegiate/xml/' + word + '?key=99bb6d8c-33b2-42be-845c-5a08ff2d8e33',
+        url: 'http://www.dictionaryapi.com/api/v1/references/collegiate/xml/' + wordArray[i] + '?key=99bb6d8c-33b2-42be-845c-5a08ff2d8e33',
         success: function(word) {
             doTheStuff(word);               
         },
@@ -59,7 +68,8 @@ var hitAPI = function(word){
             alert("Something went wrong")
         }
     });
-}    
+  }
+}      
 
 var doTheStuff = function(word) {    
     var xml2json = function(xml) {
