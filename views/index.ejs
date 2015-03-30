@@ -11,7 +11,7 @@
 	<link href='http://fonts.googleapis.com/css?family=EB+Garamond|Cinzel+Decorative|Indie+Flower' rel='stylesheet' type='text/css'>
 	
 </head>
-<body ng-controller="wineController" class="about-body">
+<body ng-controller="wineController" id="about-body">
 	<div id="wrapper">
 		<div id="header">	
       <div class="header-stuff">
@@ -46,13 +46,16 @@
 
 				<div class='push-down'>
 					<button class="btn-primary form-control btn btn-success bigger-font silly-text" id='submit-button-two'>Submit everything</button>
-				</div>
-				<div id="response" class="push-down">
+				</div>				
+		</div>
+	</div>
+
+	<div id="response-shit" class="hidden-until">
+		<div id="response" class="push-down">
 					<p><span class="underline">Word</span>: <span id="entry-one"></span></p>
 					<p><span class="underline">Part of speech</span>: <span id="POS-one"></span></p>
 					<p><span class="underline">Definition</span>: <span id="def-one"></span></p>
-				</div>		
-		</div>
+				</div>	
 	</div>
 
 	<div id="footer">

@@ -1,3 +1,17 @@
+var randImg = function() {
+   var imgCount = 6;
+        var dir = 'images/';
+        var randomCount = Math.round(Math.random() * (imgCount - 1)) + 1;
+        var images = new Array
+                images[1] = "book1.jpg",
+                images[2] = "book3.jpg",
+                images[3] = "book2.jpg",
+                images[4] = "book4.jpg",
+                images[5] = "book5.jpg",
+                images[6] = "book6.jpg",
+        document.getElementById("about-body").style.backgroundImage = "url(" + dir + images[randomCount] + ")"; 
+}
+
 /*
 var app = angular.module("wordManager", []);
 
@@ -28,7 +42,7 @@ app.controller("wineController", function($scope, $http) {
 
 
 $(document).ready(function() {
-
+    randImg();
     $('#submit-button-two').click(function() {        
         var word = $('#the-word').val();        
         doItAll(word);                                      
@@ -135,7 +149,8 @@ var doTheStuff = function(word) {
     $("#POS-one").text(partOfSpeech);
     $("#def-one").text(definition);
 
-    $("#response").show();
+    $("#response-shit").css('visibility', 'visible');
+
 
 
 

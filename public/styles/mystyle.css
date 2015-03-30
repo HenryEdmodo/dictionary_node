@@ -13,7 +13,7 @@ body {
   /*padding:15px;*/
   background:#F0F0F0;
   border-radius: 0 0 5px 5px;
-  opacity: 0.8;  
+  opacity: 0.9;  
   height: 50px
 }
 #content {
@@ -29,7 +29,7 @@ body {
   left:0;  
   background:#F0F0F0;
   border-radius: 5px 5px 0 0;
-  opacity: 0.8;
+  opacity: 0.9`;
 }
 #footer-stuff {
   font-family: 'Cinzel Decorative', cursive; 
@@ -170,26 +170,41 @@ color: black;
   border-radius: 40px;  
   max-width: 35%;
   font-size: 24px;
+  display: inline-block;
+  min-height: 300px;
 }
-.about-body {
+#response-shit {
+  margin: 0 3% 0 15% ;
+  padding: 2% 5%;
+  background: #F0F0F0;
+  border-radius: 40px;  
+  min-width: 200px;
+  max-width: 35%;
+  font-size: 24px;
+  min-height: 300px;
+  height: 200px;
+  display: inline-block;
+}
+#about-body {
+  /*
   background: url(/images/dfwpaper.jpg);
     background-size: 624px 807.6px;
     background-repeat: no-repeat;
-    background-position: center;
-  /*background: url(/images/book1.jpg);     
-  background-position: center center;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;  
-  -o-background-size: cover;
-  background-size: cover; */
-  background-color: #211922;
-  margin: 0;
-  padding: 0;
-  
+    background-position: center; 
+    */
+    /*background: url(/images/book1.jpg);     */
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;  
+    -o-background-size: cover;
+    background-size: cover; */
+    background-color: #211922;
+    margin: 0;
+    padding: 0;
 }
-#response {
-  display: none;
+.hidden-until {
+  visibility: hidden;
 }
 .underline {
   text-decoration: underline;
